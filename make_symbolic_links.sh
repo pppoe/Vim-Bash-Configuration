@@ -16,26 +16,27 @@ if [ ! -d "$CONFIG_DIR" ]; then
     exit
 fi
 
+LIST=("bashrc" "vimrc" "vim" "tmux.conf")
 # Check current directory
 if [ "$PWD" = "$HOME" ]; then
     ## Make backup
     echo "Make Backup"
     BACKUP_DIR=$CONFIG_DIR/backup/
     mkdir -p $BACKUP_DIR
-    if [ -f $PWD/.bashrc ]; then
-        mv -fv $PWD/.bashrc $BACKUP_DIR/_bashrc
-    fi
-    if [ -f $PWD/.vimrc ] ; then
-        mv -fv $PWD/.vimrc $BACKUP_DIR/_vimrc
-    fi
-    if [ -d $PWD/.vim ]; then
-        mv -fv $PWD/.vim $BACKUP_DIR/_vim
-    fi
+    for f in ${LIST[@]}
+    do
+        if [ -f $PWD/.${f} ]; then
+            mv -fv $PWD/.${f} $BACKUP_DIR/_${f}
+        fi
+    done
     ## Make links
     echo "Make Links"
-    ln -sv $CONFIG_DIR/vimrc $HOME/.vimrc
-    ln -sv $CONFIG_DIR/vim $HOME/.vim
-    ln -sv $CONFIG_DIR/bashrc $HOME/.bashrc
+    for f in ${LIST[@]}
+    do
+        if [ ! -L $PWD/.${f} ]; then
+            ln -sv $CONFIG_DIR/${f} $HOME/.${f}
+        fi
+    done
 else
     echo "Usage: this is only expected to be called from $HOME"
 fi

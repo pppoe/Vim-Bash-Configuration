@@ -16,17 +16,15 @@ if [ ! -d "$CONFIG_DIR" ]; then
     exit
 fi
 
+LIST=("$PWD/.bashrc" "$PWD/.vimrc" "$PWD/.vim" "$PWD/.tmux.conf")
 # Check current directory
 if [ "$PWD" = "$HOME" ]; then
-    if [ -L $PWD/.bashrc ]; then
-        rm -fv $PWD/.bashrc
-    fi
-    if [ -L $PWD/.vimrc ] ; then
-        rm -fv $PWD/.vimrc
-    fi
-    if [ -L $PWD/.vim ]; then
-        rm -fv $PWD/.vim
-    fi
+    for f in ${LIST[@]}
+    do
+        if [ -L $f ]; then
+            rm -fv $f
+        fi
+    done
 else
     echo "Usage: this is only expected to be called from $HOME"
 fi
