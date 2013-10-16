@@ -1,0 +1,89 @@
+""""""""""""""""""""""""""""""
+" Basic Settings
+""""""""""""""""""""""""""""""
+set sw=4
+set tabstop=4
+set expandtab
+set showcmd
+set smartindent
+set autoindent
+set incsearch
+set nobackup
+syntax on
+filetype indent on
+filetype on
+filetype plugin on
+set nobackup
+set noswapfile
+"colorscheme elflord
+set number
+colorscheme desert
+let &termencoding=&encoding
+set fileencodings=utf-8,gbk,ucs-bom,cp936
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" Shotcuts
+""""""""""""""""""""""""""""""
+let mapleader = '\'
+nmap <C-W>t :tabnew<CR>
+nmap <C-P> :tabnext<CR>
+nmap <C-N> :tabprevious<CR>
+nmap ss :source ~/.vimrc <CR>
+
+""""""""""""""""""""""""""""""
+" Plugins
+""""""""""""""""""""""""""""""
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'vim-scripts/a.vim'
+Bundle 'vim-scripts/DoxygenToolkit.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'vim-scripts/octave.vim'
+Bundle 'gerw/vim-latex-suite'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'mattn/emmet-vim'
+Bundle 'othree/html5.vim'
+
+""""""""""""""""""""""""""""""
+" YouCompleteMe
+""""""""""""""""""""""""""""""
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 0
+
+""""""""""""""""""""""""""""""
+" Automation
+""""""""""""""""""""""""""""""
+"" We need Tab in makefiles
+autocmd BufEnter,BufNewFile,BufNew,BufRead makefile,Makefile set noexpandtab 
+" GnuPlot
+autocmd BufEnter,BufNewFile,BufNew,BufRead *.glot,*.gnuplot set syntax=gnuplot 
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" Dev Configuration
+""""""""""""""""""""""""""""""
+source ~/.vim/personal/_project.vim
+if filereadable("./.project.vim")
+    source ./.project.vim
+endif
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" Latex Suite
+""""""""""""""""""""""""""""""
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+autocmd BufNew,BufNewFile,BufEnter,BufRead *.tex set iskeyword+=:
+
+""""""""""""""""""""""""""""""
+" Exclude Plugins
+""""""""""""""""""""""""""""""
+"set runtimepath-=~/.vim/bundle/vim-seek
