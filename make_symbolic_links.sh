@@ -19,20 +19,22 @@ fi
 # Check current directory
 if [ "$PWD" = "$HOME" ]; then
     ## Make backup
+    echo "Make Backup"
     BACKUP_DIR=$CONFIG_DIR/backup/
     mkdir -p $BACKUP_DIR
     if [ -f $PWD/.bashrc ]; then
-        mv -v $PWD/.bashrc $BACKUP_DIR/_bashrc
+        mv -fv $PWD/.bashrc $BACKUP_DIR/_bashrc
     fi
     if [ -f $PWD/.vimrc ] ; then
-        mv -v $PWD/.vimrc $BACKUP_DIR/_vimrc
+        mv -fv $PWD/.vimrc $BACKUP_DIR/_vimrc
     fi
     if [ -d $PWD/.vim ]; then
-        mv -v $PWD/.vim $BACKUP_DIR/_vim
+        mv -fv $PWD/.vim $BACKUP_DIR/_vim
     fi
     ## Make links
+    echo "Make Links"
     ln -sv $CONFIG_DIR/vimrc $HOME/.vimrc
-    ln -sv $CONFIG_DIR/vim $HOME/.vim/
+    ln -sv $CONFIG_DIR/vim $HOME/.vim
     ln -sv $CONFIG_DIR/bashrc $HOME/.bashrc
 else
     echo "Usage: this is only expected to be called from $HOME"
