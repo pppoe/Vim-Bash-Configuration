@@ -67,6 +67,8 @@ let g:DoxygenToolkit_licenseTag=""
 autocmd BufEnter,BufNewFile,BufNew,BufRead *.oct set syntax=octave omnifunc=syntaxcomplete#Complete
 autocmd BufNewFile,BufRead *.cpp,*.cc set syntax=cpp11
 autocmd BufNewFile,BufRead *.conf set syntax=conf
+autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.rb set sw=2
+autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.erb set syntax=html
 
 """"""""""""""""""""""""""""""""""""""""
 " MBE
