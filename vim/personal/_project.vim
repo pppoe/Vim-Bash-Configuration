@@ -56,8 +56,8 @@ nmap ( :cp <CR>
 """"""""""""""""""""""""""""""""""""""""
 " Doxygen Plugin
 """"""""""""""""""""""""""""""""""""""""
-let g:DoxygenToolkit_blockHeader="-----------------------------------------------------"
-let g:DoxygenToolkit_blockFooter="-----------------------------------------------------"
+"let g:DoxygenToolkit_blockHeader="-----------------------------------------------------"
+"let g:DoxygenToolkit_blockFooter="-----------------------------------------------------"
 let g:DoxygenToolkit_authorName="Haoxiang Li"
 let g:DoxygenToolkit_licenseTag=""
 
@@ -69,12 +69,3 @@ autocmd BufNewFile,BufRead *.cpp,*.cc set syntax=cpp11
 autocmd BufNewFile,BufRead *.conf set syntax=conf
 autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.rb set sw=2
 autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.erb set syntax=html
-
-""""""""""""""""""""""""""""""""""""""""
-" MBE
-""""""""""""""""""""""""""""""""""""""""
-nmap <Leader>t :MBEToggle <CR> 
-"nmap <Leader>f :MBEFocus <CR>
-"nmap <Leader>p :MBEbf <CR>
-"nmap <Leader>n :MBEbb <CR>
-"nmap <Leader>d :MBEbd <CR>

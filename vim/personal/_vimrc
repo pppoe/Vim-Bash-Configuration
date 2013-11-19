@@ -27,7 +27,7 @@ set fileencodings=utf-8,gbk,ucs-bom,cp936
 """"""""""""""""""""""""""""""
 let mapleader = '\'
 nmap <C-W>t :tabnew<CR>
-nmap <C-P> :tabnext<CR>
+nmap <C-M> :tabnext<CR>
 nmap <C-N> :tabprevious<CR>
 nmap ss :source ~/.vimrc <CR>
 
@@ -37,10 +37,10 @@ nmap ss :source ~/.vimrc <CR>
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'fholgado/minibufexpl.vim'
+"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'vim-scripts/a.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
@@ -48,8 +48,10 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-scripts/octave.vim'
 Bundle 'gerw/vim-latex-suite'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'mattn/emmet-vim'
 Bundle 'othree/html5.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'bling/vim-airline'
+Bundle 'kien/ctrlp.vim'
 
 """"""""""""""""""""""""""""""
 " YouCompleteMe
@@ -88,3 +90,13 @@ autocmd BufNew,BufNewFile,BufEnter,BufRead *.tex set iskeyword+=:
 " Exclude Plugins
 """"""""""""""""""""""""""""""
 "set runtimepath-=~/.vim/bundle/vim-seek
+""""""""""""""""""""""""""""""
+" Powerline
+""""""""""""""""""""""""""""""
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
+"let g:Powerline_symbols = 'fancy'
+"let g:Powerline_theme = 'default'
+"let g:Powerline_colorscheme = 'solarized256'
