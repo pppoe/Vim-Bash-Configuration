@@ -1,0 +1,2 @@
+exe=`dmenu_path | dmenu -b` 
+eval "exec $exe"
