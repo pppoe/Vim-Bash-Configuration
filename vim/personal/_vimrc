@@ -16,7 +16,9 @@ filetype plugin on
 set nobackup
 set noswapfile
 "use the shared clipboard across system
-set clipboard=unnamed 
+if $TMUX == ''
+    set clipboard+=unnamed
+endif
 "colorscheme elflord
 set number
 colorscheme desert

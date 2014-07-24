@@ -33,13 +33,14 @@ nmap mkk :make -j <CR>
 nmap mkr :make clean && make -j <CR>
 nmap mrr :make run <CR>
 nmap mcc :make clean <CR>
+nmap mgg :!gnuplot % <CR>
 """"""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""
 " Latex
 """"""""""""""""""""""""""""""""""""""""
 function! CallAutoLatex()
-    nmap mkk :!pdflatex % <CR>
+    nmap mkk :!pdflatex -shell-escape % <CR>
     nmap mrr :!open *.pdf <CR>
 endfunction
 autocmd BufEnter,BufNewFile,BufNew,BufRead *.tex call CallAutoLatex()
