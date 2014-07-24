@@ -33,6 +33,7 @@ nmap mkk :make -j <CR>
 nmap mkr :make clean && make -j <CR>
 nmap mrr :make run <CR>
 nmap mcc :make clean <CR>
+nmap mgg :!gnuplot % <CR>
 """"""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""
