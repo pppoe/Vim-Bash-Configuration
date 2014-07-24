@@ -298,6 +298,11 @@
             <command>google-chrome</command>
         </action>
     </keybind>
+    <keybind key="S-A-4">
+        <action name="Execute">
+            <command>gnome-screenshot</command>
+        </action>
+    </keybind>
     <keybind key="S-A-f">
         <action name="Execute">
             <command>firefox</command>
@@ -316,19 +321,19 @@
 
     <!-- Keybindings for mpc -->
     <!-- Special Function Keybindings-->
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="C-A-U">
         <action name="Execute">
-            <execute>amixer -q set PCM 5%+</execute>
+            <execute>amixer -q set Master 5%+</execute>
         </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="C-A-D">
         <action name="Execute">
-            <execute>amixer -q set PCM 5%-</execute>
+            <execute>amixer -q set Master 5%-</execute>
         </action>
     </keybind>
-    <keybind key="XF86AudioMute">
+    <keybind key="C-A-M">
         <action name="Execute">
-            <execute>amixer -q set PCM toggle</execute>
+            <execute>amixer -q set Master 0%</execute>
         </action>
     </keybind>
     <keybind key="XF86AudioNext">
@@ -400,6 +405,9 @@
        screen while moving a window, in milliseconds (1000 = 1 second).
        Set this to 0 to disable warping -->
     <context name="Frame">
+      <mousebind button="A-Right" action="Press">
+        <action name="Focus"/>
+      </mousebind>
       <mousebind button="A-Left" action="Press">
         <action name="Focus"/>
         <action name="Raise"/>
@@ -409,11 +417,6 @@
       </mousebind>
       <mousebind button="A-Left" action="Drag">
         <action name="Move"/>
-      </mousebind>
-      <mousebind button="A-Right" action="Press">
-        <action name="Focus"/>
-        <action name="Raise"/>
-        <action name="Unshade"/>
       </mousebind>
       <mousebind button="A-Right" action="Drag">
         <action name="Resize"/>
