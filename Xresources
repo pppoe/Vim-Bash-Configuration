@@ -1,0 +1,80 @@
+Xft.dpi: 96
+!Xft.antialias: 1
+!Xft.hinting: 1
+!Xft.hintstyle: hintfull
+!Xft.rgba: rgba
+
+URxvt.background:gray12 
+URxvt.foreground:snow
+!URxvt.background: rgba:0000/0000/0000/cccc 
+!URxvt.depth: 32
+URxvt.colorBD:blue 
+URxvt.colorUL:red 
+URxvt.scrollBar:False 
+URxvt.scrollTtyOutput: False
+URxvt.scrollTtyKeypress: True
+URxvt.scrollWithBuffer: True
+!URxvt.scrollBar_right:True 
+!set the artificial transparency of the v.t.
+!URxvt.transparency:255 
+!URxvt*perl-ext: tabbed 
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: firefox
+URxvt.matcher.button:  1
+URxvt.keysym.C-Delete: perl:matcher
+
+URxvt.inheritPixmap: False 
+URxvt.shading:100 
+URxvt.saveLines:1500 
+URxvt.color4:RoyalBlue4 
+URxvt.color12:SkyBlue2 
+URxvt.tintColor:Gray25 
+Rxvt.preeditType:Root 
+URxvt.borderLess:False 
+URxvt.title: urxvt 
+URxvt.font:xft:DejaVu Sans Mono:hintstyle=hintfull:size=11:antialias=true,xft:SimHei:size=12:antialias=true
+
+Xcursor.theme: Silver
+
+!look and feel
+xterm*termName: xterm-256color
+!xterm.geometry: 80x36
+xterm*scrollBar: false
+!xterm*rightScrollBar: true
+xterm*loginshell: true
+xterm*background:  gray12
+xterm*foreground:  snow
+xterm*borderLess: true
+xterm*cursorBlink: true
+!xterm*colorUL: yellow
+!xterm*colorBD: blue
+xterm*colorBDMode: true
+xterm*eightBitInput: false
+!xterm*altSendsEscape: true
+!-- Tango color scheme
+!print color and bold/underline attributes
+!xterm*printAttributes: 2
+!xterm*printerCommand: cat > ~/xtermdump
+!font and locale
+
+xterm*locale: true
+!xterm*utf8:     true
+xterm*utf8Title: true
+xterm*fontMenu*fontdefault*Label: Default
+xterm*faceName: DejaVu Sans Mono:antialias=True:pixelsize=13
+xterm*boldFont: DejaVu Sans Mono:style=Bold:pixelsize=13
+xterm*faceNameDoublesize:SimHei:pixelsize=14:antialias=true
+xterm*xftAntialias: true
+xterm*cjkWidth: false         
+xterm*translations: #override \n\
+xterm*.Translation: #override \
+Shift <Key>Insert: insert-selection(PRIMARY)
+
+XTerm*color0: black
+XTerm*color1: red
+XTerm*color2: green
+XTerm*color3: yellow
+XTerm*color4: dodgerblue
+XTerm*color5: magenta
+XTerm*color6: cyan
+XTerm*color7: white
