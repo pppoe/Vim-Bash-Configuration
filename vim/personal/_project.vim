@@ -40,7 +40,7 @@ nmap mgg :!gnuplot % <CR>
 " Latex
 """"""""""""""""""""""""""""""""""""""""
 function! CallAutoLatex()
-    nmap mkk :!pdflatex -shell-escape % <CR>
+    nmap mkk :!pdflatex --shell-escape % <CR>
     nmap mrr :!open *.pdf <CR>
 endfunction
 autocmd BufEnter,BufNewFile,BufNew,BufRead *.tex call CallAutoLatex()
@@ -65,7 +65,7 @@ let g:DoxygenToolkit_licenseTag=""
 """"""""""""""""""""""""""""""""""""""""
 " Octave
 """"""""""""""""""""""""""""""""""""""""
-autocmd BufEnter,BufNewFile,BufNew,BufRead *.oct set syntax=octave omnifunc=syntaxcomplete#Complete
+autocmd BufEnter,BufNewFile,BufNew,BufRead *.oct set syntax=matlab omnifunc=syntaxcomplete#Complete
 autocmd BufNewFile,BufRead *.cpp,*.cc set syntax=cpp11
 autocmd BufNewFile,BufRead *.conf set syntax=conf
 autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.rb set sw=2

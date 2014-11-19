@@ -1,6 +1,7 @@
 import os
 import ycm_core
 from clang_helpers import PrepareClangFlags
+from os.path import expanduser
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
@@ -17,6 +18,8 @@ flags = [
 'c++',
 '-I',
 '.',
+'-I',
+expanduser("~") + '/local/include/',
 '-I',
 '/usr/local/include'
 ]
