@@ -101,3 +101,4 @@ if [ -f "/opt/intel/bin/compilervars.sh" ]; then
 fi
 export EDITOR=vim
 export PATH=$HOME/bin:$PATH
+export PYTHONSTARTUP=$HOME/.pythonstartup
