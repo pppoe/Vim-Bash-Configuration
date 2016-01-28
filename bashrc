@@ -106,3 +106,6 @@ export EDITOR=vim
 if [ -f "/Users/haoxiang/Main/TechStacks/DL/torch/install/bin/torch-activate" ]; then
     . /Users/haoxiang/Main/TechStacks/DL/torch/install/bin/torch-activate
 fi
+if [ -f "$HOME/.pythonstartup" ]; then
+    export PYTHONSTARTUP=$HOME/.pythonstartup
+fi
