@@ -70,3 +70,4 @@ autocmd BufNewFile,BufRead *.cpp,*.cc set syntax=cpp11
 autocmd BufNewFile,BufRead *.conf set syntax=conf
 autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.rb set sw=2
 autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.erb set syntax=html
+autocmd BufNewFile,BufRead,BufNewFile,BufEnter *.launch set syntax=xml
