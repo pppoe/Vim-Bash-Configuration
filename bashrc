@@ -99,5 +99,10 @@ export TERM=xterm
 if [ -f "/opt/intel/bin/compilervars.sh" ]; then
     source /opt/intel/bin/compilervars.sh intel64
 fi
+if [ -f "/Applications/MacVim.app/Contents/MacOS/Vim" ]; then
+    alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+fi
 export EDITOR=vim
-export PATH=$HOME/bin:$PATH
+if [ -f "/Users/haoxiang/Main/TechStacks/DL/torch/install/bin/torch-activate" ]; then
+    . /Users/haoxiang/Main/TechStacks/DL/torch/install/bin/torch-activate
+fi
