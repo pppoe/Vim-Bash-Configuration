@@ -59,6 +59,7 @@ xterm*eightBitInput: false
 
 xterm*locale: true
 !xterm*utf8:     true
+XTerm*selectToClipboard: true
 xterm*utf8Title: true
 xterm*fontMenu*fontdefault*Label: Default
 xterm*faceName: DejaVu Sans Mono:antialias=True:pixelsize=13
@@ -69,6 +70,8 @@ xterm*cjkWidth: false
 xterm*translations: #override \n\
 xterm*.Translation: #override \
 Shift <Key>Insert: insert-selection(PRIMARY)
+Ctrl Shift <Key>C: copy-selection(PRIMARY)
+
 
 XTerm*color0: black
 XTerm*color1: red
