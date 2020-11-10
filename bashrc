@@ -30,7 +30,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-PS1="\e[32m\u#\h@\@\e[0m \e[34m\w\e[0m\n\$"
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1="\e[32m\u#\h@\@\e[0m \e[34m\w\e[0m\[\e[91m\]\$(parse_git_branch)\[\e[00m\]\n\$"
 
 unset color_prompt force_color_prompt
 
