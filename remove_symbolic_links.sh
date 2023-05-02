@@ -16,7 +16,7 @@ if [ ! -d "$CONFIG_DIR" ]; then
     exit
 fi
 
-LIST=("$PWD/.bashrc" "$PWD/.vimrc" "$PWD/.vim" "$PWD/.tmux.conf" "$PWD/.pythonstartup")
+LIST=("$PWD/.bashrc" "$PWD/.tmux.conf" "$PWD/.pythonstartup")
 # Check current directory
 if [ "$PWD" = "$HOME" ]; then
     for f in ${LIST[@]}

@@ -16,7 +16,7 @@ if [ ! -d "$CONFIG_DIR" ]; then
     exit
 fi
 
-LIST=("bashrc" "vimrc" "vim" "tmux.conf" "runDmenu" "Xresources" "config/openbox" "pythonstartup")
+LIST=("bashrc" "tmux.conf" "runDmenu" "Xresources" "config/openbox" "pythonstartup" "config/nvim")
 # Check current directory
 if [ "$PWD" = "$HOME" ]; then
     ## Make backup
