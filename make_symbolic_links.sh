@@ -16,7 +16,7 @@ if [ ! -d "$CONFIG_DIR" ]; then
     exit
 fi
 
-LIST=("bashrc" "tmux.conf" "runDmenu" "Xresources" "config/openbox" "pythonstartup" "config/nvim")
+LIST=("bashrc" "tmux.conf" "runDmenu" "Xresources" "config/openbox" "pythonstartup" "config/nvim" "local/share/nvim/site")
 # Check current directory
 if [ "$PWD" = "$HOME" ]; then
     ## Make backup
@@ -34,6 +34,7 @@ if [ "$PWD" = "$HOME" ]; then
     for f in ${LIST[@]}
     do
         if [ ! -L $PWD/.${f} ]; then
+            mkdir -pv `dirname $HOME/.${f}`
             ln -sv $CONFIG_DIR/${f} $HOME/.${f}
         fi
     done
