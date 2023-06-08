@@ -39,4 +39,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'pppoe/copilot.vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
+
+let g:python_highlight_all = 1
