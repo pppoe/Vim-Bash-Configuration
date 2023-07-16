@@ -38,7 +38,7 @@ Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'chriskempson/base16-vim'
-Plug 'pppoe/copilot.vim'
+Plug 'Exafunction/codeium.vim'
 Plug 'sheerun/vim-polyglot'
 call plug#end()
 
