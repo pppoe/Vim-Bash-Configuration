@@ -16,6 +16,7 @@ if $TMUX == ''
 endif
 set number
 let &termencoding=&encoding
+set termguicolors
 set fileencodings=utf-8,gbk,ucs-bom,cp936
 set termguicolors
 syntax enable
@@ -39,7 +40,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'Exafunction/codeium.vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'sheerun/vim-polyglot'
 call plug#end()
 
+let g:copilot_filetypes = { '*': v:false, 'python': v:true }
 let g:python_highlight_all = 1
