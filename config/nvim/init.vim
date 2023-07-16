@@ -18,6 +18,7 @@ endif
 set number
 colorscheme desert
 let &termencoding=&encoding
+set termguicolors
 set fileencodings=utf-8,gbk,ucs-bom,cp936
 """"""""""""""""""""""""""""""
 
@@ -31,7 +32,6 @@ nmap <C-N> :tabprevious<CR>
 filetype plugin indent on
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
-nmap <C-W>p iimport pdb; pdb.set_trace()<CR><ESC>
 
 call plug#begin()
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -39,4 +39,10 @@ Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'github/copilot.vim'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
+
+let g:copilot_filetypes = { '*': v:false, 'python': v:true }
+
