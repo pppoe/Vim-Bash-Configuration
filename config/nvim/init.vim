@@ -41,7 +41,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'Exafunction/codeium.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()
 
 let g:copilot_filetypes = { '*': v:false, 'python': v:true }
@@ -150,3 +150,4 @@ let g:mkdp_filetypes = ['markdown']
 let g:mkdp_theme = 'dark'
 let g:mkdp_combine_preview = 0
 let g:mkdp_combine_preview_auto_refresh = 1
+set mouse=""
