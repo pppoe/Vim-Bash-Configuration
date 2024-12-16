@@ -16,7 +16,6 @@ if $TMUX == ''
 endif
 set number
 let &termencoding=&encoding
-set termguicolors
 set fileencodings=utf-8,gbk,ucs-bom,cp936
 set termguicolors
 syntax enable
@@ -151,3 +150,5 @@ let g:mkdp_theme = 'dark'
 let g:mkdp_combine_preview = 0
 let g:mkdp_combine_preview_auto_refresh = 1
 set mouse=""
+
+colorscheme base16-google-dark
